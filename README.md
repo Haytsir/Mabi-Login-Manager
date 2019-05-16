@@ -13,5 +13,5 @@ login = LoginManager()
 NPP, passport = login.Login()
 ```
 
-## Requires
+## Requirements
 Cryptodome
