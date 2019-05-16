@@ -8,7 +8,7 @@ where the module saves encrypted login informations and passport caches
 You can just import the module, then create a instance of it.
 It has cmd interface just for now,  Login method will prints it on the prompt.
 ```python
-import LoginManager
+from LoginManager import LoginManager
 login = LoginManager()
 NPP, passport = login.Login()
 ```
