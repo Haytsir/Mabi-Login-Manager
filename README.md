@@ -7,3 +7,6 @@ from LoginManager import LoginManager
 login = LoginManager()
 NPP, passport = login.Login()
 ```
+
+## Requires
+Cryptodome
