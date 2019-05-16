@@ -35,8 +35,8 @@ def GetPasswordHash(password):
 
 	# 4E 65 78 6F 6E 55 73 65 72 (넥슨의 로그인 처리 스크립트 상에서 사용되는 값) => NexonUser
 	# 16진수로 NexonUser 를 나타낸 것이다.
-	# Cryptodome을 이용한 표준 HMAC SHA256 로는 다른 결과값이 나온다... (NgbHash.py 에 서술한 대로, js에서는 데이터 오버플로우가 발생하기 때문)
-	# 넥슨에서 사용하는 NgbHash를 python 코드로 implement해서 사용하거나, hmac 모듈을 통해 구현
+	# Cryptodome을 이용한 표준 HMAC SHA256 로는 다른 결과값이 나오는 것을 확인.
+	# 넥슨에서 사용하는 NgbHash를 python 코드로 구현해서 사용하거나, hmac 모듈을 통해 구현
 	#from NgbHash import NgbHash
 	#NgbHashObject = NgbHash()
 	#passwordHash = header + NgbHashObject.HMAC_SHA256_MAC(key=hashKey, msg=NgbHashObject.HMAC_SHA256_MAC(key="NexonUser", msg=password))
