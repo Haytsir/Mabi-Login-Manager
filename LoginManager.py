@@ -154,8 +154,7 @@ class LoginManager:
         if not('nexonid' in loginInfoCookies):
             failure = True
 
-        # NPP 키가 없으면 이후에 에러가 날 것이므로(kanan.py에서 로그인 정보 쿠키의 NPP키를 참조하기 때문)
-        # 없는 값이라도 정보에 추가하여 오류를 방지
+        # NPP값이 없는 값이라도 정보에 추가하여 나중에 생길 수 있는 오류를 방지
         # it'll be error when NPP value doesn't exist, so append it as an empty value
         if not('NPP' in loginInfoCookies):
             loginInfoCookies['NPP'] = ''
