@@ -295,8 +295,8 @@ class LoginManager:
             json.dump(loginInfos, loginInfoFile)
 
         h = hashlib.md5()
-        h.update(username.encode('utf-8')) #update 안에는 인코딩할 문자열을 집어넣습니다.
-        usernameEnc = h.hexdigest() #hexdigest는 우리가 익히 아는 16진수로 출력.
+        h.update(username.encode('utf-8')) # update 안에는 인코딩할 문자열을 넣는다.
+        usernameEnc = h.hexdigest() # hexdigest는 결과 값을 16진수로 출력.
         
         #datetime.fromtimestamp(loginInfo['cachedAt'])
         with open('cache/'+usernameEnc, 'w', encoding='utf-8') as loginInfoCacheFile:
@@ -319,8 +319,8 @@ class LoginManager:
             json.dump(loginInfos, loginInfoFile)
 
         h = hashlib.md5()
-        h.update(username.encode('utf-8')) #update 안에는 인코딩할 문자열을 집어넣습니다.
-        usernameEnc = h.hexdigest() #hexdigest는 우리가 익히 아는 16진수로 출력.
+        h.update(username.encode('utf-8')) #update 안에는 인코딩할 문자열을 넣는다.
+        usernameEnc = h.hexdigest() # hexdigest는 결과 값을 16진수로 출력.
         if os.path.exists('cache/'+usernameEnc):
             os.remove('cache/'+usernameEnc)
     
